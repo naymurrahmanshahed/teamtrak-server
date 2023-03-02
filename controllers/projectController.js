@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const Project = require("../models/projectModel");
 
 //get all projects
@@ -9,6 +10,22 @@ const getAllProjects = async (req, res) => {
 };
 
 //get a single project
+
+const getSingleProject = async (req, res) => {
+  const { id } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    res.status(404).json({ error: "Please Enter Valid Id" });
+  }
+
+  const project = await Project.findById(id);
+
+  if (!project) {
+    return res.status(404).json({ error: "No Project Found" });
+  }
+
+  res.status(200).json(project);
+};
 
 //post a single project
 
@@ -32,4 +49,5 @@ const postProject = async (req, res) => {
 module.exports = {
   postProject,
   getAllProjects,
+  getSingleProject,
 };

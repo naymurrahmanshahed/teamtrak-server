@@ -2,6 +2,7 @@ const express = require("express");
 const {
   postProject,
   getAllProjects,
+  getSingleProject,
 } = require("../controllers/projectController");
 
 //router
@@ -15,11 +16,7 @@ router.get("/", getAllProjects);
 
 //GET a single project
 
-router.get("/:id", (req, res) => {
-  res.json({
-    message: "GET a single project",
-  });
-});
+router.get("/:id", getSingleProject);
 
 //POST a new project
 router.post("/", postProject);
