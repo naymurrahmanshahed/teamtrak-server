@@ -1,5 +1,8 @@
 const express = require("express");
-const Project = require("../models/projectModel");
+const {
+  postProject,
+  getAllProjects,
+} = require("../controllers/projectController");
 
 //router
 const router = express.Router();
@@ -8,9 +11,7 @@ const router = express.Router();
 
 //GET all project
 
-router.get("/", (req, res) => {
-  res.json({ message: "GET all projects" });
-});
+router.get("/", getAllProjects);
 
 //GET a single project
 
@@ -21,18 +22,7 @@ router.get("/:id", (req, res) => {
 });
 
 //POST a new project
-router.post("/", async (req, res) => {
-  const data = req.body;
-  try {
-    //create document in mongodb
-    const project = await Project.create({
-      ...data,
-    });
-    res.status(200).json(project);
-  } catch (err) {
-    res.status(400).json({ error: err.message });
-  }
-});
+router.post("/", postProject);
 
 //UPDATE a project
 
