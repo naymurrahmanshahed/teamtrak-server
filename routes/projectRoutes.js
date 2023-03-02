@@ -4,6 +4,7 @@ const {
   getAllProjects,
   getSingleProject,
   deleteProject,
+  updateProject,
 } = require("../controllers/projectController");
 
 //router
@@ -24,11 +25,7 @@ router.post("/", postProject);
 
 //UPDATE a project
 
-router.patch("/:id", (req, res) => {
-  res.json({
-    message: "Update a project",
-  });
-});
+router.patch("/:id", updateProject);
 
 //DELETE a project
 
