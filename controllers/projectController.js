@@ -43,6 +43,20 @@ const postProject = async (req, res) => {
 };
 
 //delete a project
+const deleteProject = async (req, res) => {
+  const { id } = req.params;
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    res.status(404).json({ error: "Please Enter Valid Id" });
+  }
+
+  const project = await Project.findOneAndDelete({ _id: id });
+
+  if (!project) {
+    return res.status(400).json({ error: "No Project Found" });
+  }
+
+  res.status(200).json(project);
+};
 
 //update a project
 
@@ -50,4 +64,5 @@ module.exports = {
   postProject,
   getAllProjects,
   getSingleProject,
+  deleteProject,
 };
