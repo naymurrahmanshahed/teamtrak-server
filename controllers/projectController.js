@@ -3,7 +3,9 @@ const Project = require("../models/projectModel");
 //get all projects
 
 const getAllProjects = async (req, res) => {
-  res.json({ message: "GET all projects" });
+  const projects = await Project.find({});
+
+  res.status(200).json(projects);
 };
 
 //get a single project
