@@ -8,6 +8,8 @@ const mongoose = require("mongoose");
 
 const projectRoutes = require("./routes/projectRoutes");
 
+const userRoutes = require("./routes/userRoutes");
+
 //app
 const app = express();
 
@@ -24,6 +26,7 @@ app.use((req, res, next) => {
 
 // connect to router
 app.use("/api/projects", projectRoutes);
+app.use("/api/user", userRoutes);
 
 //port
 const PORT = process.env.PORT || 4000;
