@@ -27,30 +27,30 @@ Teamtrak is built using the MERN stack, featuring the following powerful tools:
 
 ## Installation
 
--1. Clone the client repository using the following command:
+1. Clone the client repository using the following command:
 
-`git clone https://github.com/shohan-pherones/teamtrak-client.git
-`
--2. Clone the server repository using the following command:
+`git clone https://github.com/shohan-pherones/teamtrak-client.git`
 
-`git clone https://github.com/shohan-pherones/orbit-council-server.git
-`
--3.Install the required dependencies by running the following command in both the client and server directories:
+2. Clone the server repository using the following command:
 
-`npm install
-`
--4. Create a `.env` file in the root directory of the server and add the following variables:
+`git clone https://github.com/shohan-pherones/orbit-council-server.git`
+
+3.Install the required dependencies by running the following command in both the client and server directories:
+
+`npm install`
+
+4. Create a `.env` file in the root directory of the server and add the following variables:
 
 `MONGO_URI=<your MongoDB connection string>
-SECRET=<a secret string for JWT authentication>
-`
--5.Create a `.env` file in the root directory of the client and add the following variable:
+SECRET=<a secret string for JWT authentication>`
 
-`REACT_APP_BASE_URL=<your base URL, for example http://localhost:5000>
-`
--6.Start the backend server by running the following command in the server directory:
-`npm start
-`
--7.Start the frontend by running the following command in the client directory:
-`npm start
-`
+5.Create a `.env` file in the root directory of the client and add the following variable:
+
+`REACT_APP_BASE_URL=<your base URL, for example http://localhost:5000>`
+
+6.Start the backend server by running the following command in the server directory:
+`npm start`
+
+7.Start the frontend by running the following command in the client directory:
+`npm start`
+
