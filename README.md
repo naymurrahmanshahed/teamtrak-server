@@ -29,11 +29,11 @@ Teamtrak is built using the MERN stack, featuring the following powerful tools:
 
 1. Clone the client repository using the following command:
 
-`git clone https://github.com/shohan-pherones/teamtrak-client.git`
+`git clone https://github.com/{your_username}/teamtrak-client.git`
 
 2. Clone the server repository using the following command:
 
-`git clone https://github.com/shohan-pherones/orbit-council-server.git`
+`git clone https://github.com/{your_username}/teamtrak-server.git`
 
 3.Install the required dependencies by running the following command in both the client and server directories:
 
